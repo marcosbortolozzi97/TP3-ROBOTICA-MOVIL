@@ -77,3 +77,5 @@ En el panel de visualización, en Global Options establecer el campo 'Fixed Fram
 | `Path`        | `/groundtruth_path`           | `Lines`        | Trayectoria real o estimada |
 | `Pose`        | `/camera_left_pose`           | `Arrow`        | Visualización de las poses  |
 | `Pose`        | `/camera_right_est_pose`      | `Arrow`        | Visualización de las poses  |
+
+Si se pretende modificar el color de las distintas visualizaciones puede modificar en cada tópico el campo 'Color', y en particular en los tópicos PointCloud2 configurar el campo 'Color Transformer' a **FlatColor** y modificar el campo 'Color'.
