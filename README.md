@@ -26,6 +26,8 @@ sudo apt install docker docker.io
 docker --version
 ```
 
+---
+
 ### **Guía para ejecución del TP**
 1- Construir la imagen Docker  
 Desde la carpeta raíz del repositorio (donde está el Dockerfile y el requirements.txt):  
