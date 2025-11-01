@@ -40,7 +40,7 @@ Para que RViz funcione dentro del contenedor y pueda mostrar las ventanas gráfi
 ```bash
 xhost +local:docker
 ```
-Cuando finalice la ejecución o cuando desee puede desactivar este permiso mediante  
+Cuando finalice la ejecución del programa o cuando desee puede desactivar este permiso mediante  
 ```bash
 xhost -local:docker
 ```
