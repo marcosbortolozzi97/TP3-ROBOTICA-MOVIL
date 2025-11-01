@@ -1,0 +1,22 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos grandes o innecesarios
+*.ply
+*.bag
+*.zip
+
+# Archivos temporales de imágenes
+*.png
+*.jpg
+
+# IDEs
+.vscode/
+.idea/
