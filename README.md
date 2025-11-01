@@ -42,5 +42,17 @@ xhost +local:docker
 3- Ejecutar el contenedor  
 Ejecutar el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario:  
 ```bash
-docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/marcos:/home/marcos \ stereo_pointcloud_ros2
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<<NOMBRE>>:/home/<<NOMBRE>> \ stereo_pointcloud_ros2
+```
+
+4- Compilar el workspace dentro del contenedor  
+Una vez dentro del contenedor:  
+```bash
+cd /ros2_ws
+```
+```bash
+colcon build
+```
+```bash
+source install/setup.bash
 ```
