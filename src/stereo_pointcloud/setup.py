@@ -24,7 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'triangular_nube = stereo_pointcloud.Trabajo_ImagenesEstereo:main',
+            'Tp3 = stereo_pointcloud.Trabajo_ImagenesEstereo:main',
         ],
     },
 )
