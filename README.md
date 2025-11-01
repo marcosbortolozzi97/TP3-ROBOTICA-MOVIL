@@ -68,10 +68,12 @@ Abrir RViz dentro del contenedor:
 ```bash
 rviz2
 ```
-En el panel de visualización, agregar los siguientes elementos:  
-| Tipo          | Tópico                        | Descripción                 |
-| ------------- | ----------------------------- | --------------------------- |
-| `PointCloud2` | `/stereo/pointcloud_densa`    | Nube densa reconstruida     |
-| `PointCloud2` | `/stereo/pointcloud_filtrada` | Nube filtrada por RANSAC    |
-| `Path`        | `/groundtruth_path`           | Trayectoria real o estimada |
-| `TF`          | —                             | Visualización de las poses  |
+En el panel de visualización, en Global Options establecer el campo 'Fixed Frame' como **world**, agregar y configurar los siguientes tópicos:  
+| Tipo          | Tópico                        | Estilo         | Descripción                 |
+| ------------- | ----------------------------- | -------------- | --------------------------- |
+| `PointCloud2` | `/stereo/pointcloud_densa`    | `Points`       | Nube densa                  |
+| `PointCloud2` | `/stereo/pointcloud_filtrada` | `Points`       | Nube filtrada               |
+| `PointCloud2` | `/stereo/pointcloud_original` | `Points`       | Nube original               |
+| `Path`        | `/groundtruth_path`           | `Lines`        | Trayectoria real o estimada |
+| `Pose`        | `/camera_left_pose`           | `Arrow`        | Visualización de las poses  |
+| `Pose`        | `/camera_right_est_pose`      | `Arrow`        | Visualización de las poses  |
