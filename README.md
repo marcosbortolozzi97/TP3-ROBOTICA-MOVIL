@@ -42,7 +42,7 @@ xhost +local:docker
 3- Ejecutar el contenedor  
 Ejecutar el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario:  
 ```bash
-docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<<NOMBRE>>:/home/<<NOMBRE>> \ stereo_pointcloud_ros2
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
 ```
 
 4- Compilar el workspace dentro del contenedor  
@@ -56,3 +56,22 @@ colcon build
 ```bash
 source install/setup.bash
 ```
+
+5- Ejecutar el programa principal  
+Para ejecutar el procesamiento estéreo completo y la publicación de resultados en ROS 2:  
+```bash
+ros2 run stereo_pointcloud triangular_nube
+```
+
+6- Visualización en RViz  
+Abrir RViz dentro del contenedor:  
+```bash
+rviz2
+```
+En el panel de visualización, agregar los siguientes elementos:  
+| Tipo          | Tópico                        | Descripción                 |
+| ------------- | ----------------------------- | --------------------------- |
+| `PointCloud2` | `/stereo/pointcloud_densa`    | Nube densa reconstruida     |
+| `PointCloud2` | `/stereo/pointcloud_filtrada` | Nube filtrada por RANSAC    |
+| `Path`        | `/groundtruth_path`           | Trayectoria real o estimada |
+| `TF`          | —                             | Visualización de las poses  |
