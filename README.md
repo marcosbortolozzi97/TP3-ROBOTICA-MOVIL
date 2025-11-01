@@ -66,7 +66,7 @@ source install/setup.bash
 5- Ejecutar el programa principal  
 Para ejecutar el procesamiento estéreo completo y la publicación de resultados en ROS 2:  
 ```bash
-ros2 run stereo_pointcloud triangular_nube
+ros2 run stereo_pointcloud Tp3
 ```
 
 6- Visualización en RViz  
