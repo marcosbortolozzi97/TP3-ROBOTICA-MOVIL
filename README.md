@@ -56,7 +56,7 @@ xhost -local:docker
 ```
 
 3- Ejecutar el contenedor  
-Ejecutar el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario:  
+Ejecutar en una terminal el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario:  
 ```bash
 docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
 ```
@@ -80,7 +80,10 @@ ros2 run stereo_pointcloud Tp3
 ```
 
 6- Visualización en RViz  
-En otra terminal, abrir RViz:  
+En otra terminal, abrir RViz dentro del contenedor Docker:  
+```bash
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
+```
 ```bash
 rviz2
 ```
