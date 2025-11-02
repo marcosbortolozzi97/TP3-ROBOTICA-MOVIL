@@ -19,10 +19,12 @@ Todo el entorno está contenido dentro de un 'Contenedor Docker', lo que permite
 ---
 
 ### **Requisitos previos**
-Instalar **Docker** si no lo tiene instalado y verificar su funcionamiento:
+Instalar **Docker** si no lo tiene instalado y/o verificar su funcionamiento:
 
 ```bash
 sudo apt install docker docker.io
+```
+```bash
 docker --version
 ```
 
