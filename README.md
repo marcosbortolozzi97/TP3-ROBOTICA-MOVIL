@@ -136,18 +136,7 @@ Tener en cuenta que el contenedor se elimina automáticamente al salir, debido a
 ---
 
 ### **Nota:**
-Si se desea ejecutar el script **calibracion_camaras.py** dentro del contenedor debe tener en cuenta los siguientes pasos:  
-```bash
-docker run -it --rm \
-    --net=host \
-    -e DISPLAY=$DISPLAY \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v /home/<usuario>/TP3-ROBOTICA-MOVIL:/ros2_ws \
-    stereo_pointcloud_ros2
-```
-```bash
-cd /ros2_ws
-```
+Si se desea ejecutar el script **calibracion_camaras.py** debe estar dentro del contenedor y luego ejecutar:  
 ```bash
 python3 calibracion_camaras.py
 
