@@ -73,7 +73,7 @@ xhost -local:docker
 3- Ejecutar el contenedor  
 Ejecutar en una terminal el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario:  
 ```bash
-docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>/TP3-ROBOTICA-MOVIL:/ros2_ws \ stereo_pointcloud_ros2
 ```
 
 4- Compilar el workspace dentro del contenedor  
@@ -97,7 +97,7 @@ ros2 run stereo_pointcloud Tp3
 6- Visualización en RViz  
 Para visualizar los resultados en RViz, abrir otra terminal y ejecutar el contenedor con acceso gráfico:  
 ```bash
-docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>/TP3-ROBOTICA-MOVIL:/ros2_ws \ stereo_pointcloud_ros2
 ```
 Una vez dentro del contenedor, ejecutar:  
 ```bash
@@ -122,7 +122,7 @@ Si se pretende modificar el color de las distintas visualizaciones puede modific
 ### **Nota:**
 Si se desea ejecutar el script **calibracion_camaras.py** dentro del contenedor debe tener en cuenta los siguientes pasos:  
 ```bash
-docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>/TP3-ROBOTICA-MOVIL:/ros2_ws \ stereo_pointcloud_ros2
 ```
 ```bash
 cd /ros2_ws
