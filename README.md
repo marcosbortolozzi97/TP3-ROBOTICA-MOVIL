@@ -44,10 +44,11 @@ docker build -t stereo_pointcloud_ros2 .
 ```
 
 2- Permitir acceso gráfico  
-Para que RViz funcione dentro del contenedor y pueda mostrar las ventanas gráficas:  
+Para que RViz (y otras interfaces visuales) funcionen correctamente dentro del contenedor Docker, es necesario habilitar el acceso del servidor gráfico X a Docker solo una vez (o cada vez que se reinicie el sistema):  
 ```bash
 xhost +local:docker
 ```
+Una vez habilitado, ya se podrán ejecutar las visualizaciones sin necesidad de repetir este paso cada vez que se corra el contenedor.  
 Cuando finalice la ejecución del programa o cuando desee puede desactivar este permiso mediante  
 ```bash
 xhost -local:docker
