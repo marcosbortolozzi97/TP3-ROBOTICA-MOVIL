@@ -73,7 +73,7 @@ xhost -local:docker
 ```
 
 3- Ejecutar el contenedor  
-Ejecutar en una terminal el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario (cambiar 'usuario' por tu usuario):  
+Ejecutar en una terminal el contenedor con acceso al entorno gráfico y montando la carpeta local del usuario (modificar por tu nombre de usuario en el codigo siguiente):  
 ```bash
 docker run -it --rm \
     --net=host \
