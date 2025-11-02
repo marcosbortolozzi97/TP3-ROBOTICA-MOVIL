@@ -57,12 +57,14 @@ Desde la carpeta raíz del repositorio (donde está el Dockerfile y el requireme
 ```bash
 docker build -t stereo_pointcloud_ros2 .
 ```
+La correcta construcción de la imagen devuelve al final: **Successfully tagged stereo_pointcloud_ros2:latest**  
 
 2- Permitir acceso gráfico  
 Para que RViz (y otras interfaces visuales) funcionen correctamente dentro del contenedor Docker, es necesario habilitar el acceso del servidor gráfico X a Docker solo una vez (o cada vez que se reinicie el sistema):  
 ```bash
 xhost +local:docker
 ```
+Debería recibir un mensaje como: **non-network local connections being added to access control list**  
 Una vez habilitado, ya se podrán ejecutar las visualizaciones sin necesidad de repetir este paso cada vez que se corra el contenedor.  
   
 Cuando finalice la ejecución del programa o cuando desee puede desactivar este permiso mediante  
