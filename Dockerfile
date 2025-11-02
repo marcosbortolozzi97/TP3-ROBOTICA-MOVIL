@@ -20,9 +20,8 @@ RUN apt-get update && apt-get install -y \
     ros-jazzy-image-transport \
     ros-jazzy-sensor-msgs \
     && rm -rf /var/lib/apt/lists/*
-    RUN pip install --no-cache-dir transforms3d
 
-    
+RUN pip install --no-cache-dir transforms3d
 
 # =====================================================
 # 🔹 COPIAR EL WORKSPACE AL CONTENEDOR
