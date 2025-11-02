@@ -19,12 +19,18 @@ Todo el entorno está contenido dentro de un 'Contenedor Docker', lo que permite
 ---
 
 ### **Requisitos previos**
-Instalar **Docker** y verificar su funcionamiento:
+Instalar **Docker** si no lo tiene instalado y verificar su funcionamiento:
 
 ```bash
 sudo apt install docker docker.io
 docker --version
 ```
+
+---
+
+### **Calibración Pre ejecución**
+Antes de ejecutar el procesamiento estéreo, se realiza la calibración de las cámaras. Para ello, se utiliza el script **calibracion_camaras.py**, que aplica el método clásico de OpenCV.  
+Las imágenes extraídas se encuentran en la carpeta calibración_images que abarca ambas cámaras. Es script adjunto toma como entrada las imágenes desde esa carpeta y genera un archivo **stereo_calibration.yml** como salida, el cual contiene los parámetros intrínsecos y extrínsecos utilizados en la ejecución.  
 
 ---
 
