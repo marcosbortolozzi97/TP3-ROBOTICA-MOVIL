@@ -127,6 +127,12 @@ En el panel de visualización, en Global Options establecer el campo 'Fixed Fram
 
 Si se pretende modificar el color de las distintas visualizaciones puede modificar en cada tópico el campo 'Color', y en particular en los tópicos PointCloud2 configurar el campo 'Color Transformer' a **FlatColor** y modificar el campo 'Color'.
 
+7- Salir de Contenedor  
+```bash
+exit
+```
+Tener en cuenta que el contenedor se elimina automáticamente al salir, debido a que se lo está ejecutando con --rm.  
+
 ---
 
 ### **Nota:**
