@@ -87,6 +87,8 @@ docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/
 ```bash
 rviz2
 ```
+**Importante:** mientras se esté ejecutando el programa principal se van a cargar los distintos tópicos en rviz, por lo que para poder observarlos se deberá tener activo (tildeado) el tópico a visualizar antes de la ejecución. Una vez concluida la ejecución se pierde la visualizar al destildar.  
+  
 En el panel de visualización, en Global Options establecer el campo 'Fixed Frame' como **world**, agregar y configurar los siguientes tópicos:  
 | Tipo          | Tópico                        | Estilo         | Descripción                 |
 | ------------- | ----------------------------- | -------------- | --------------------------- |
