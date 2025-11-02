@@ -76,7 +76,7 @@ ros2 run stereo_pointcloud Tp3
 ```
 
 6- Visualización en RViz  
-Abrir RViz dentro del contenedor:  
+En otra terminal, abrir RViz:  
 ```bash
 rviz2
 ```
