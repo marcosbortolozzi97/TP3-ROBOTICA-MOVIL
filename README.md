@@ -91,3 +91,18 @@ En el panel de visualización, en Global Options establecer el campo 'Fixed Fram
 | `Pose`        | `/camera_right_est_pose`      | `Arrow`        | Visualización de las poses  |
 
 Si se pretende modificar el color de las distintas visualizaciones puede modificar en cada tópico el campo 'Color', y en particular en los tópicos PointCloud2 configurar el campo 'Color Transformer' a **FlatColor** y modificar el campo 'Color'.
+
+---
+
+### **Nota:**
+Si se desea ejecutar el script **calibracion_camaras.py** dentro del contenedor debe tener en cuenta los siguientes pasos:  
+```bash
+docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
+```
+```bash
+cd /ros2_ws
+```
+```bash
+python3 calibracion_camaras.py
+
+```
