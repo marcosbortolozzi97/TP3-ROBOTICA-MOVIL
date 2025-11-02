@@ -473,7 +473,7 @@ def publicar_poses_ros2(R_est, t_est, timeout_s=20.0):
     """
     import time
     from geometry_msgs.msg import PoseStamped, Quaternion
-    from tf_transformations import quaternion_from_matrix
+    from transforms3d.quaternions import mat2quat as quaternion_from_matrix
 
     rclpy.init()
     node = Node("poses_camaras_pub")
