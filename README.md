@@ -30,6 +30,20 @@ docker --version
 
 ---
 
+### **Clonar el repositorio desde GitHub**
+Desde tu home (o cualquier carpeta vacía):  
+```bash
+cd ~
+```
+```bash
+git clone https://github.com/marcosbortolozzi97/TP3-ROBOTICA-MOVIL.git
+```
+```bash
+cd TP3-ROBOTICA-MOVIL
+```
+
+---
+
 ### **Calibración Pre ejecución**
 Antes de ejecutar el procesamiento estéreo, se realiza la calibración de las cámaras. Para ello, se utiliza el script **calibracion_camaras.py**, que aplica el método clásico de OpenCV.  
 Las imágenes extraídas se encuentran en la carpeta calibración_images que abarca ambas cámaras. Es script adjunto toma como entrada las imágenes desde esa carpeta y genera un archivo **stereo_calibration.yml** como salida, el cual contiene los parámetros intrínsecos y extrínsecos utilizados en la ejecución.  
