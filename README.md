@@ -41,7 +41,7 @@ git clone https://github.com/marcosbortolozzi97/TP3-ROBOTICA-MOVIL.git
 ```bash
 cd TP3-ROBOTICA-MOVIL
 ```
-Verificar la correcta clonación de los archivos en /TP3-ROBOTICA-MOVIL.  
+Puede tardar algunos minutos. Luego, verificar la correcta clonación de los archivos en /TP3-ROBOTICA-MOVIL.  
 
 ---
 
