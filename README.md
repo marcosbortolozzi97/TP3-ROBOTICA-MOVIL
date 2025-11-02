@@ -113,11 +113,7 @@ Una vez dentro del contenedor, ejecutar:
 ```bash
 rviz2
 ```
-**Importante:** mientras se esté ejecutando el programa principal se van a cargar los distintos tópicos en rviz, por lo que para poder observarlos se deberá tener activo (tildeado) el tópico a visualizar antes de la ejecución. Una vez concluida la ejecución se pierde la visualizar al destildar. En caso de fallar la ejecución, se recomiendo ejecutar rviz con el comando:  
-```bash
-LIBGL_ALWAYS_SOFTWARE=1 rviz2
-```
-esto fuerza que RViz use renderizado por CPU en lugar de GPU (software rendering), funciona en cualquier entorno Docker sin aceleración 3D.  
+**Importante:** mientras se esté ejecutando el programa principal se van a cargar los distintos tópicos en rviz, por lo que para poder observarlos se deberá tener activo (tildeado) el tópico a visualizar antes de la ejecución. Una vez concluida la ejecución se pierde la visualizar al destildar. 
   
 En el panel de visualización, en Global Options establecer el campo 'Fixed Frame' como **world**, agregar y configurar los siguientes tópicos:  
 | Tipo          | Tópico                        | Estilo         | Descripción                 |
@@ -150,3 +146,9 @@ cd /ros2_ws
 python3 calibracion_camaras.py
 
 ```
+  
+Por otro lado, en caso de fallar la ejecución por aceleración por hardware (si RViz se cierra o muestra una pantalla negra), se recomienda ejecutar RViz con el comando:  
+```bash
+LIBGL_ALWAYS_SOFTWARE=1 rviz2
+```
+esto fuerza que RViz use renderizado por CPU en lugar de GPU (software rendering), que funciona en cualquier entorno Docker sin aceleración 3D.  
