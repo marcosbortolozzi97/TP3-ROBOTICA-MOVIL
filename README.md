@@ -95,7 +95,7 @@ ros2 run stereo_pointcloud Tp3
 ```
 
 6- Visualización en RViz  
-En otra terminal, abrir RViz dentro del contenedor Docker:  
+Para visualizar los resultados en RViz, abrir otra terminal y ejecutar el contenedor con acceso gráfico:  
 ```bash
 docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
 ```
