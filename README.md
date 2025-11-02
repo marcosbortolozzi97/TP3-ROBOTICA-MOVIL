@@ -49,6 +49,7 @@ Para que RViz (y otras interfaces visuales) funcionen correctamente dentro del c
 xhost +local:docker
 ```
 Una vez habilitado, ya se podrán ejecutar las visualizaciones sin necesidad de repetir este paso cada vez que se corra el contenedor.  
+  
 Cuando finalice la ejecución del programa o cuando desee puede desactivar este permiso mediante  
 ```bash
 xhost -local:docker
