@@ -99,6 +99,7 @@ En otra terminal, abrir RViz dentro del contenedor Docker:
 ```bash
 docker run -it --rm \ --net=host \ -e DISPLAY=$DISPLAY \ -v /tmp/.X11-unix:/tmp/.X11-unix \ -v /home/<USUARIO>:/home/<USUARIO> \ stereo_pointcloud_ros2
 ```
+Una vez dentro del contenedor, ejecutar:  
 ```bash
 rviz2
 ```
