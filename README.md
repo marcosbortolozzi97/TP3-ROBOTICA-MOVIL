@@ -87,9 +87,6 @@ Una vez dentro del contenedor, te encontrarar con root@tu_device_name:/ros2_ws#
 4- Compilar el workspace dentro del contenedor  
 Una vez dentro del contenedor:  
 ```bash
-cd /ros2_ws
-```
-```bash
 colcon build
 ```
 ```bash
