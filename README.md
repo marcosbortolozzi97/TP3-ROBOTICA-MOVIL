@@ -67,7 +67,7 @@ xhost +local:docker
 Debería recibir un mensaje como: **non-network local connections being added to access control list**  
 Una vez habilitado, ya se podrán ejecutar las visualizaciones sin necesidad de repetir este paso cada vez que se corra el contenedor.  
   
-Cuando finalice la ejecución del programa o cuando desee puede desactivar este permiso mediante  
+Cuando finalice la ejecución del programa o cuando desee, puede salir del contenedor (7-) y desactivar este permiso mediante  
 ```bash
 xhost -local:docker
 ```
