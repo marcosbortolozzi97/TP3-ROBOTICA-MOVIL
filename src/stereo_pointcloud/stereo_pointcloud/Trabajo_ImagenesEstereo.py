@@ -585,7 +585,7 @@ def main():
 
 
     # --- Publicar la trayectoria ground-truth ---
-    csv_path = "/ros2_ws/MH_01_easy/mav0/state_groundtruth_estimate0/data.csv"
+    csv_path = "/ros2_ws/data.csv"
     publicar_trayectoria_ros2(csv_path, timeout_s=10.0)
 
 
